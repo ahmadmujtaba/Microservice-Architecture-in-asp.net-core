@@ -1,0 +1,52 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/product/getall",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44343
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product/getall",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/getbyid/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44343
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product/getbyid/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44343
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/product",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ]
+    }
+    //{
+    //  "DownstreamPathTemplate": "/api/Product",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 44343
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/gateway/product",
+    //  "UpstreamHttpMethod": [ "DELETE" ]
+    //}
+  ]
+}
